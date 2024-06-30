@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import classnames from "classnames";
 import Feedback from "../feedback";
 import { IInputProps } from "../types";

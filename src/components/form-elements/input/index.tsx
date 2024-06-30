@@ -1,4 +1,4 @@
-import React, { forwardRef, KeyboardEvent } from "react";
+import  { forwardRef, KeyboardEvent } from "react";
 import classnames from "classnames";
 import Feedback from "../feedback";
 import { IInputProps } from "../types";
@@ -53,7 +53,6 @@ export const Input = forwardRef<HTMLInputElement, IProps>(
           onKeyDown={onKeyDown}
           value={value}
           readOnly={readonly}
-          style={{ width, height, ...customStyle }}
           {...restProps}
         />
         {feedbackText && showState && (

@@ -1,5 +1,3 @@
-import { IPosition, IToolLanguage } from "./position";
-
 export interface IPositionToolLanguageImage {
     id: number;
     cdnUrl: string;

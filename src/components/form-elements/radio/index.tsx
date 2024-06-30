@@ -61,7 +61,7 @@ export const Radio = forwardRef<HTMLInputElement, IProps>(
           {checked && (
             <div
               className="absolute inset-0 rounded-full bg-white"
-              style={{ backgroundImage: `url(${circle})`, backgroundSize: "50%" }}
+              style={{ backgroundSize: "50%" }}
             />
           )}
         </label>

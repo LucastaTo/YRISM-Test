@@ -1,5 +1,5 @@
 import { all, takeLatest, call, put } from 'redux-saga/effects';
-import { incrementAsync, incrementAsyncSuccess, incrementAsyncFailure } from '../slices/counterSlice';
+import { incrementAsync, incrementAsyncSuccess } from '../slices/counterSlice';
 import { displayErrorToast } from '../../utils/toast';
 
 const api = {

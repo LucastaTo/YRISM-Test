@@ -127,9 +127,7 @@ const MainCreateEmployee: React.FC = () => {
     event: React.ChangeEvent<HTMLSelectElement | HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const selectedPositionId = parseInt(event.target.value);
-    const selectedPosition = positionResources.find(
-      (item) => item.positionResourceId === selectedPositionId
-    );
+
     setValue("positions", [{ displayOrder: positions.length + 1, positionResourceId: selectedPositionId, toolLanguages: [defaultToolLanguage] }]);
   };
 

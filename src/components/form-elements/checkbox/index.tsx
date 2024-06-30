@@ -23,7 +23,6 @@ export const Checkbox = forwardRef<HTMLInputElement, IProps>(
       onClick,
       onBlur,
       value,
-      ...restProps
     },
     ref
   ) => {

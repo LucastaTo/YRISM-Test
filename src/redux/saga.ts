@@ -1,9 +1,11 @@
-import { all } from "redux-saga/effects";
+import { all, fork } from "typed-redux-saga";
 import counterSaga from "./saga/counter";
+import employeeSaga from "./saga/employee";
 
 function* saga(): Generator {
     yield all([
-        counterSaga,
+        fork(counterSaga),
+        fork(employeeSaga),
     ]);
 }
 

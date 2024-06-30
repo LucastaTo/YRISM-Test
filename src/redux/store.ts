@@ -3,11 +3,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 import { combineReducers } from 'redux';
 import counterReducer from './slices/counterSlice';
+import employeeReducer from './slices/employeeSlice';
 import rootSaga from './saga';
 
 // Combine reducers if you have multiple slices
 const rootReducer = combineReducers({
   counter: counterReducer,
+  employee: employeeReducer,
 });
 
 // Create saga middleware

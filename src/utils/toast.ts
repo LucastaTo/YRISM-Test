@@ -12,15 +12,23 @@ const toastOptions: ToastOptions = {
 
 // Function to display error toast
 function displayErrorToast(error: any, duration: number = 3000): void {
-    const message = typeof error === 'string' ? error :
-        has(error, 'data.message') ? error.data.message :
-        error.response ? (_get(error.response, 'data.message') || error.message) :
-        error.request ? 'Network error' :
-        error.message;
+    let message = '';
+
+    if (typeof error === 'string') {
+        message = error;
+    } else if (error && has(error, 'data.message')) {
+        message = error.data.message;
+    } else if (error && error.response) {
+        message = _get(error.response, 'data.message') || error.message;
+    } else if (error && error.request) {
+        message = 'Network error';
+    } else {
+        message = error.message || 'Unknown error';
+    }
 
     toast.error(message, {
-        ...toastOptions,
-        autoClose: duration
+        autoClose: duration,
+        // Add other toast options if needed
     });
 }
 

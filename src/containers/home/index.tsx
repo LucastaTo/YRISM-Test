@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Home = () => {
     const test = 1
     return (

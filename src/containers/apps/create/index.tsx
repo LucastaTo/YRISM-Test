@@ -63,11 +63,11 @@ const schema = yup.object().shape({
               displayOrder: yup.number().required(),
               data: yup.string().required(),
             })
-          ),
+          ).required(),
         })
-      ),
+      ).required(),
     })
-  ),
+  ).required(),
 });
 
 const defaultToolLanguage = {
@@ -232,7 +232,7 @@ const MainCreateEmployee: React.FC = () => {
                   </button>
             </div>
             
-            {position.toolLanguages.map((toolLanguage, languageIndex) => (
+            {position.toolLanguages.map((_, languageIndex) => (
               <div key={languageIndex}>
                 {languageIndex > 0 && <div className="mb-[10px] grid grid-cols-10-30-60 gap-5 items-center mb-[2rem]">
                   <span />

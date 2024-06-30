@@ -73,7 +73,7 @@ function* positionResourcesAsyncSaga() {
   }
 }
 
-function* getEmployeeByIdAsyncSaga(action: ReturnType<typeof getEmployeeByIdAsync>): Generator<any, void, IResponse<IEmployee>> {
+function* getEmployeeByIdAsyncSaga(_: ReturnType<typeof getEmployeeByIdAsync>): Generator<any, void, IResponse<IEmployee>> {
   try {
     const response: IResponse<IEmployee> = yield call(
       api.fetchtEmployeeData,

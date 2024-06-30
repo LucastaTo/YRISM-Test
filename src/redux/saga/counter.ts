@@ -6,7 +6,7 @@ const api = {
   fetchIncrementData: () => new Promise<number>((resolve) => setTimeout(() => resolve(1), 1000)),
 };
 
-function* incrementAsyncSaga(action: ReturnType<typeof incrementAsync>) : Generator<any, void, number> {
+function* incrementAsyncSaga(_: ReturnType<typeof incrementAsync>) : Generator<any, void, number> {
   try {
     const data: number = yield call(api.fetchIncrementData);
     yield put(incrementAsyncSuccess(data));

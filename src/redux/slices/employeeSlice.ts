@@ -43,7 +43,7 @@ const employeeSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
-    getEmployeeByIdAsync(_, action: PayloadAction<number>) {},
+    getEmployeeByIdAsync(_, _1: PayloadAction<number>) {},
     getEmployeeByIdAsyncSuccess(state, action: PayloadAction<IEmployee>) {
       state.employee = action.payload;
     },

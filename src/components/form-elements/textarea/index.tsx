@@ -54,7 +54,6 @@ export const Textarea = forwardRef<HTMLTextAreaElement, IProps>(
           onChange={onChange}
           onClick={onClick}
           onBlur={onBlur}
-          style={{ width, height }}
           {...restProps}
         />
         {feedbackText && showState && (

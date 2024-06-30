@@ -53,7 +53,6 @@ export const Select = forwardRef<HTMLSelectElement, IProps>(
           onClick={onClick}
           onBlur={onBlur}
           disabled={disabled}
-          style={{ width, height, ...customStyle }}
           {...restProps}
         >
             {children}
